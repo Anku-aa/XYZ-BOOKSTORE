@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<script src="script_catalogue.js"></script>
+<script src="script.js"></script>
+
+
+<!-- <script>
+    function showToast(message) {
+        let toast = document.getElementById("toast");
+        toast.textContent = message;
+        toast.classList.add("show");
+
+        setTimeout(() => {
+            toast.classList.remove("show");
+        }, 2000);
+    }
+
+    function addToCart(title, author, price, image) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        cart.push({ title, author, price, image });
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // show notification
+        showToast("Added to Cart!");
+    }
+</script> -->
+
+
+
+
+
+<head>
+    <title>BOOK CATALOGUE</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style_books.css">
+</head>
+
+<div id="toast">Added to Cart!</div>
+
+
+
+
+<body>
+
+    <h1 align="center">BOOK CATALOGUE</h1>
+
+    <!-- CSE Books -->
+    <h2>CSE Books</h2>
+    <table border="1" width="100%" cellpadding="8">
+        <tr>
+            <th>Book Image</th>
+            <th>Book Name</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Add to Cart</th>
+        </tr>
+
+        <tr>
+            <td align="center"><img src="images/a.jpg" width="80" height="110"></td>
+            <td>Introduction to Computer Science</td>
+            <td>Perry Donham</td>
+            <td>₹550</td>
+            <td><button onclick="addToCartFromButton(this)">Add to Cart</button></td>
+        </tr>
+
+        <tr>
+            <td align="center"><img src="images/b.jpg" width="80" height="110"></td>
+            <td>Open Data Structure</td>
+            <td>Pat Morin</td>
+            <td>₹600</td>
+            <td><button onclick="addToCartFromButton(this)">Add to Cart</button></td>
+        </tr>
+
+        <tr>
+            <td align="center"><img src="images/c.jpg" width="80" height="110"></td>
+            <td>Computer Networking: Principles, Protocols</td>
+            <td>Olivier Bonaventure</td>
+            <td>₹500</td>
+            <td><button onclick="addToCartFromButton(this)">Add to Cart</button></td>
+        </tr>
+
+        <tr>
+            <td align="center"><img src="images/d.png" width="80" height="110"></td>
+            <td>Computer Science One</td>
+            <td>Chris Bourke</td>
+            <td>₹550</td>
+            <td><button onclick="addToCartFromButton(this)">Add to Cart</button></td>
+        </tr>
+    </table>
+
+
+    <!-- ECE Books -->
+    <h2>ECE Books</h2>
+    <table border="1" width="100%" cellpadding="8">
+        <tr>
+            <th>Book Image</th>
+            <th>Book Name</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Add to Cart</th>
+        </tr>
+
+        <tr>
+            <td align="center"><img src="images/e.jpg" width="80" height="110"></td>
+            <td>Electronic Devices and Circuit Theory</td>
+            <td>Robert L. Boylestad, Louis Nashelsky</td>
+            <td>₹480</td>
+            <td><button onclick="addToCartFromButton(this)">Add to Cart</button></td>
+        </tr>
+
+        <tr>
+            <td align="center"><img src="images/f.jpg" width="80" height="110"></td>
+            <td>Digital Logic and Computer Design</td>
+            <td>M. Morris Mano</td>
+            <td>₹650</td>
+            <td><button onclick="addToCartFromButton(this)">Add to Cart</button></td>
+        </tr>
+
+        <tr>
+            <td align="center"><img src="images/g.jpg" width="80" height="110"></td>
+            <td>Communication Systems</td>
+            <td>Simon Haykin</td>
+            <td>₹700</td>
+            <td><button onclick="addToCartFromButton(this)">Add to Cart</button></td>
+        </tr>
+
+        <tr>
+            <td align="center"><img src="images/h.webp" width="80" height="110"></td>
+            <td>Microprocessors and Interfacing</td>
+            <td>Douglas V. Hall</td>
+            <td>₹700</td>
+            <td><button onclick="addToCartFromButton(this)">Add to Cart</button></td>
+        </tr>
+    </table>
+
+
+    <!-- EEE Books -->
+    <h2>EEE Books</h2>
+    <table border="1" width="100%" cellpadding="8">
+        <tr>
+            <th>Book Image</th>
+            <th>Book Name</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Add to Cart</th>
+        </tr>
+
+        <tr>
+            <td align="center"><img src="images/i.png" width="80" height="110"></td>
+            <td>Electrical Machines</td>
+            <td>P.S. Bimbhra</td>
+            <td>₹620</td>
+            <td><button onclick="addToCartFromButton(this)">Add to Cart</button></td>
+        </tr>
+
+        <tr>
+            <td align="center"><img src="images/j.jpg" width="80" height="110"></td>
+            <td>Circuit Theory / Network Analysis</td>
+            <td>Van Valkenburg</td>
+            <td>₹580</td>
+            <td><button onclick="addToCartFromButton(this)">Add to Cart</button></td>
+        </tr>
+
+        <tr>
+            <td align="center"><img src="images/k.jpg" width="80" height="110"></td>
+            <td>Digital Signal Processing</td>
+            <td>Proakis & Manolakis</td>
+            <td>₹540</td>
+            <td><button onclick="addToCartFromButton(this)">Add to Cart</button></td>
+        </tr>
+
+        <tr>
+            <td align="center"><img src="images/h.webp" width="80" height="110"></td>
+            <td>Microprocessors and Interfacing</td>
+            <td>Douglas V. Hall</td>
+            <td>₹700</td>
+            <td><button onclick="addToCartFromButton(this)">Add to Cart</button></td>
+        </tr>
+    </table>
+
+
+    <!-- CIVIL Books -->
+    <h2>Civil Engineering Books</h2>
+    <table border="1" width="100%" cellpadding="8">
+        <tr>
+            <th>Book Image</th>
+            <th>Book Name</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Add to Cart</th>
+        </tr>
+
+        <tr>
+            <td align="center"><img src="images/l.jpg" width="80" height="110"></td>
+            <td>Fluid Mechanics</td>
+            <td>R.K. Bansal</td>
+            <td>₹450</td>
+            <td><button onclick="addToCartFromButton(this)">Add to Cart</button></td>
+        </tr>
+
+        <tr>
+            <td align="center"><img src="images/m.jpg" width="80" height="110"></td>
+            <td>Concrete Technology</td>
+            <td>M.S. Shetty</td>
+            <td>₹450</td>
+            <td><button onclick="addToCartFromButton(this)">Add to Cart</button></td>
+        </tr>
+
+        <tr>
+            <td align="center"><img src="images/n.jpg" width="80" height="110"></td>
+            <td>Structural Analysis</td>
+            <td>R.C. Hibbeler</td>
+            <td>₹500</td>
+            <td><button onclick="addToCartFromButton(this)">Add to Cart</button></td>
+        </tr>
+
+        <tr>
+            <td align="center"><img src="images/o.jpg" width="80" height="110"></td>
+            <td>Hydraulics & Hydraulic Machines</td>
+            <td>P.N. Modi, S.M. Seth</td>
+            <td>₹550</td>
+            <td><button onclick="addToCartFromButton(this)">Add to Cart</button></td>
+        </tr>
+
+
+    </table>
+
+</body>
+
+
+
+
+</html>
