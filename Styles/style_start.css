@@ -1,0 +1,33 @@
+
+.start-body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #e6ecff, #f9fbff);
+    margin: 0;
+    padding: 0;
+}
+
+
+.start-box {
+    width: 70%;
+    margin: 60px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+
+.start-box h3 {
+    font-size: 30px;
+    color: darkblue;
+    margin-bottom: 15px;
+}
+
+
+.start-box p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+}
+s
